@@ -1,0 +1,27 @@
+# all emacs files
+*~
+
+# backups
+Backups
+
+# vrui library lib, bin, d, and o directories
+Vrui-4.2-006r2/lib
+Vrui-4.2-006r2/bin
+Vrui-4.2-006r2/d
+Vrui-4.2-006r2/o
+
+# vrui example bin, d, and o directories
+Vrui-4.2-006r2/ExamplePrograms/bin
+Vrui-4.2-006r2/ExamplePrograms/d
+Vrui-4.2-006r2/ExamplePrograms/o
+
+# kinect library lib, bin, d, and o directories
+Kinect-3.2r2/lib
+Kinect-3.2r2/bin
+Kinect-3.2r2/d
+Kinect-3.2r2/o
+
+# sarndbox bin, d, and o directories
+SARndbox-2.3r2/bin
+SARndbox-2.3r2/d
+SARndbox-2.3r2/o
