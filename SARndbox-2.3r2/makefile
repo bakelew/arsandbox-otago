@@ -161,7 +161,8 @@ SARNDBOX_SOURCES = FrameFilter.cpp \
                    DEM.cpp \
                    DEMTool.cpp \
                    BathymetrySaverTool.cpp \
-                   Sandbox.cpp
+                   Sandbox.cpp \
+                   XYZTool.cpp
 
 $(EXEDIR)/SARndbox: $(SARNDBOX_SOURCES:%.cpp=$(OBJDIR)/%.o)
 .PHONY: SARndbox
