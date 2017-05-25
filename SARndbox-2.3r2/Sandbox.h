@@ -69,6 +69,7 @@ class HandExtractor;
 typedef Misc::FunctionCall<GLContextData&> AddWaterFunction;
 class WaterRenderer;
 class XYZTool;
+class WaterLevelTool;
 
 class Sandbox:public Vrui::Application,public GLObject
 	{
@@ -124,6 +125,7 @@ class Sandbox:public Vrui::Application,public GLObject
 	friend class LocalWaterTool;
 	friend class DEMTool;
         friend class XYZTool; // so we can access filteredFrames from our XYZTool
+        friend class WaterLevelTool;
 	
 	/* Elements: */
 	private:

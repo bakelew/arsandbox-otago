@@ -31,9 +31,13 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
 /* Forward declarations: */
 class DepthImageRenderer;
+class WaterLevelTool;
 
 class ElevationColorMap:public GLColorMap,public GLTextureObject
 	{
+
+        friend class WaterLevelTool; // so that WaterLevelTool can access texturePlaneEq
+            
 	/* Elements: */
 	private:
 	GLfloat texturePlaneEq[4]; // Texture mapping plane equation in GLSL-compatible format
