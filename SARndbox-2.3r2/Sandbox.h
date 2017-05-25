@@ -70,6 +70,7 @@ typedef Misc::FunctionCall<GLContextData&> AddWaterFunction;
 class WaterRenderer;
 class XYZTool;
 class WaterLevelTool;
+class ContourLineTool;
 
 class Sandbox:public Vrui::Application,public GLObject
 	{
@@ -126,7 +127,8 @@ class Sandbox:public Vrui::Application,public GLObject
 	friend class DEMTool;
         friend class XYZTool; // so we can access filteredFrames from our XYZTool
         friend class WaterLevelTool;
-	
+        friend class ContourLineTool;
+        
 	/* Elements: */
 	private:
 	Kinect::FrameSource* camera; // The Kinect camera device

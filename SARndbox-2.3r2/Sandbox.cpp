@@ -110,6 +110,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 #include "BathymetrySaverTool.h"
 #include "XYZTool.h"
 #include "WaterLevelTool.h"
+#include "ContourLineTool.h"
 
 #include "Config.h"
 
@@ -982,6 +983,7 @@ Sandbox::Sandbox(int& argc,char**& argv)
 	DEMTool::initClass(*Vrui::getToolManager());
 	XYZTool::initClass(*Vrui::getToolManager()); // add the tool to the program
         WaterLevelTool::initClass(*Vrui::getToolManager());
+        ContourLineTool::initClass(*Vrui::getToolManager());
         
 	if(waterTable!=0)
 		BathymetrySaverTool::initClass(waterTable,*Vrui::getToolManager());
