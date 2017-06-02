@@ -21,7 +21,8 @@ Point3d::Point3d(double x, double y, double z)
 Point3d getPoint(string line)
 {
     Point3d result(0,0,0);
-    sscanf(line.c_str(), "%lf %lf %lf", &result.x, &result.y, &result.z);
+    double w;
+    sscanf(line.c_str(), "%lf %lf %lf %lf", &result.x, &result.y, &result.z, &w);
     return result;
 }
 
@@ -40,23 +41,25 @@ int main(int argc, char *argv[])
     ofstream outfile(argv[2], ios::binary);
 
     int h, w;
-    w = 640;
-    h = 480;
+    w = 320;
+    h = 240;
 
     outfile.write(reinterpret_cast<char*>(&w), sizeof(int));
     outfile.write(reinterpret_cast<char*>(&h), sizeof(int));
 
-    float xmin=-9999, ymin=-9999, xmax, ymax;
+    float xmin=1000000.f, ymin=1000000.f, xmax=-1000000.f, ymax=-1000000.f;
     vector<Point3d> data;
     while(getline(infile,line))
 	{
+            getline(infile,line);
             Point3d newPoint = getPoint(line);
             if (newPoint.x < xmin) xmin = newPoint.x;
             if (newPoint.y < ymin) ymin = newPoint.y;
+            if (newPoint.x > xmax) xmax = newPoint.x;
+            if (newPoint.y > ymax) ymax = newPoint.y;
             data.push_back(newPoint);
 	}
-    xmax = xmin+w;
-    ymax = ymin+h;
+    cout << xmin << " " << xmax << " " << ymin << " " << ymax << endl;
 
     outfile.write(reinterpret_cast<char*>(&xmin), sizeof(float));
     outfile.write(reinterpret_cast<char*>(&ymin), sizeof(float));
