@@ -268,9 +268,9 @@ GLhandleARB SurfaceRenderer::createSinglePassSurfaceShader(const GLLightTracker&
 				/* Calculate the fragment's color from a double-ramp function: */\n\
 				vec4 baseColor;\n\
 				if(demDist<0.0)\n\
-					baseColor=mix(vec4(1.0,1.0,1.0,1.0),vec4(1.0,0.0,0.0,1.0),min(-demDist,1.0));\n\
+					baseColor=mix(vec4(1.0,1.0,1.0,1.0),vec4(0.0,0.0,1.0,1.0),min(-demDist,1.0));\n\
 				else\n\
-					baseColor=mix(vec4(1.0,1.0,1.0,1.0),vec4(0.0,0.0,1.0,1.0),min(demDist,1.0));\n\
+					baseColor=mix(vec4(1.0,1.0,1.0,1.0),vec4(1.0,0.0,0.0,1.0),min(demDist,1.0));\n\
 				\n";
 			}
 		else if(elevationColorMap!=0)

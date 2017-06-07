@@ -1,0 +1,3 @@
+g++ --std=c++11 tin2grid.cpp -o tin2grid
+g++ --std=c++11 tin2gridd.cpp -o tin2gridd
+g++ --std=c++11 xyz2grid.cpp -o xyz2grid
