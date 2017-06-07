@@ -1217,8 +1217,8 @@ void Sandbox::display(GLContextData& contextData) const
 			++numSteps;
 			}
 		#else
-		if(totalTimeStep>1.0e-8f)
-			std::cout<<"Ran out of time by "<<totalTimeStep<<std::endl;
+		//if(totalTimeStep>1.0e-8f)
+                    //std::cout<<"Ran out of time by "<<totalTimeStep<<std::endl;
 		#endif
 		
 		/* Mark the water simulation state as up-to-date for this frame: */

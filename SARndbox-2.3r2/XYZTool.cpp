@@ -66,8 +66,8 @@ void XYZTool::frame(void)
         Kinect::FrameSource::DepthCorrection::PixelCorrection *pixelDepthCorrection = dc->getPixelCorrection(application->frameSize);
 
         // loop over each pixel in the frame
-        for (uint x=0; x<application->frameSize[0]; ++x) {
-            for (uint y=0; y<application->frameSize[1]; ++y) {
+        for (uint y=0; y<application->frameSize[1]; ++y) {
+            for (uint x=0; x<application->frameSize[0]; ++x) {
 
                 // get the filtered depth value, and add half-pixel xy offsets, depth correct z
                 FilteredDepth d = frameData[y*application->frameSize[0]+x];
