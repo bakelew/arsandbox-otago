@@ -1,7 +1,7 @@
 #ifndef WATERLEVELTOOL_INCLUDED
 #define WATERLEVELTOOL_INCLUDED
 
-#define WATER_ADJUST_SPEED 0.01
+#define WATER_ADJUST_SPEED 0.001
 
 #include <Vrui/Tool.h>
 #include <Vrui/GenericToolFactory.h>

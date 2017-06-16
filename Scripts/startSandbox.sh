@@ -11,9 +11,12 @@ result=0
 while [ $i -le $attempts ]
 do
     $resetCommand
-    sleep 1
-    $command &
     sleep $delay
+    
+    # $command &
+    $command "$@" > /dev/null & # run the command quietly
+    sleep $delay
+    
     if result="$(xdotool search -name $name)"
     then
         result=1
@@ -30,4 +33,4 @@ then
     notify-send "$name" "$name failed to open, consider restarting"
 fi
 
-read -n 1 -s -p "Press any key to close ..."
+# read -n 1 -s -p "Press any key to close ..."
