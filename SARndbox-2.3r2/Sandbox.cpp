@@ -112,6 +112,7 @@ Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 #include "WaterLevelTool.h"
 #include "ContourLineTool.h"
 #include "WaterDisableTool.h"
+#include "HeightColorMapTool.h"
 
 #include "Config.h"
 
@@ -986,6 +987,7 @@ Sandbox::Sandbox(int& argc,char**& argv)
         WaterLevelTool::initClass(*Vrui::getToolManager());
         ContourLineTool::initClass(*Vrui::getToolManager());
         WaterDisableTool::initClass(*Vrui::getToolManager());
+        HeightColorMapTool::initClass(*Vrui::getToolManager());
         
 	if(waterTable!=0)
 		BathymetrySaverTool::initClass(waterTable,*Vrui::getToolManager());

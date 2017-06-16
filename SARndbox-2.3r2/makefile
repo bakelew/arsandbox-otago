@@ -165,7 +165,8 @@ SARNDBOX_SOURCES = FrameFilter.cpp \
                    XYZTool.cpp \
                    WaterLevelTool.cpp \
                    ContourLineTool.cpp \
-                   WaterDisableTool.cpp
+                   WaterDisableTool.cpp \
+                   HeightColorMapTool.cpp
 
 $(EXEDIR)/SARndbox: $(SARNDBOX_SOURCES:%.cpp=$(OBJDIR)/%.o)
 .PHONY: SARndbox

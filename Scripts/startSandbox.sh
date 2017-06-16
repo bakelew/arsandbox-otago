@@ -14,7 +14,7 @@ do
     sleep $delay
     
     # $command &
-    $command "$@" > /dev/null & # run the command quietly
+    $command "$@" & # run the command quietly
     sleep $delay
     
     if result="$(xdotool search -name $name)"

@@ -72,6 +72,7 @@ class XYZTool;
 class WaterLevelTool;
 class ContourLineTool;
 class WaterDisableTool;
+class HeightColorMapTool;
 
 class Sandbox:public Vrui::Application,public GLObject
 	{
@@ -130,6 +131,7 @@ class Sandbox:public Vrui::Application,public GLObject
         friend class WaterLevelTool;
         friend class ContourLineTool;
         friend class WaterDisableTool;
+        friend class HeightColorMapTool;
         
 	/* Elements: */
 	private:
